@@ -12,9 +12,16 @@ const cors = require("cors");
 
 const middlewares = require("./middleware");
 
+const mongoose = require('mongoose');
+
 const PORT = process.env.PORT || 3001;
 
 const app = express();
+
+mongoose.connect(process.env.DATABASE_URL, {
+  useNewUrlParser : true
+});
+
 app.use(morgan('common'));
 app.use(helmet());
 app.use(cors( 
