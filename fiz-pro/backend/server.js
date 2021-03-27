@@ -4,10 +4,8 @@ const express = require("express");
 
 //logs http request on the console for debugging
 const morgan = require("morgan");
-
 //sercuety by removing headers and adding headers in network
 const helmet = require("helmet");
-
 const cors = require("cors");
 
 const middlewares = require("./middleware");
